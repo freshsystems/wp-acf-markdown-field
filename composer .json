@@ -1,0 +1,22 @@
+{
+	"name": "freshsystems/wp-acf-markdown-field",
+	"description": "Adds a Markdown field to Advanced Custom Fields.",
+	"keywords": ["wordpress"],
+	"homepage": "https://github.com/freshsystems/wp-acf-markdown-field",
+	"license": "GPL-2.0+",
+	"type": "wordpress-muplugin",
+	"authors": [
+		{
+			"name": "Fresh Systems",
+			"email": "info@freshsystems.co.uk",
+			"homepage": "https://freshsystems.co.uk"
+		}
+	],
+	"require": {
+		"composer/installers": "^1.0|^2.0",
+		"php": ">=5.4.0"
+	},
+	"support": {
+		"issues": "https://github.com/freshsystems/wp-acf-markdown-field/issues"
+	}
+}

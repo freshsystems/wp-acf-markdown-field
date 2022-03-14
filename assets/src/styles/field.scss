@@ -1,0 +1,27 @@
+@import '@node_modules/highlight.js/styles/github.css';
+@import '@node_modules/easymde/dist/easymde.min.css';
+
+// Apply fixes for the code highlighting in preview mode (<pre>).
+// easy-markdown-editor is seemingly not adding the 'hljs'
+// class to the <code> element (see https://github.com/Ionaru/easy-markdown-editor/issues/336)
+// meaning the highlight.js theme does not render correctly. The style overrides below are a temporary fix.
+.acf-field-markdown {
+  .acf-input {
+    .EasyMDEContainer {
+      .editor-preview {
+        pre {
+          background: #ebebeb;
+          padding: 10px;
+          border-radius: 4px;
+          code {
+            background: none;
+            padding: 0;
+            margin: 0;
+          }
+          max-width: 100%;
+          overflow-x: scroll;
+        }
+      }
+    }
+  }
+}

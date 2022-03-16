@@ -7,14 +7,10 @@
 - Adds a `markdown` field type for use with the [Advanced Custom Fields](https://www.advancedcustomfields.com) plugin. 
 - Supports the WP media picker for embedding images into markdown content.
 
----
-
 ## Requirements
 
 - Advanced Custom Fields `>= 5`
 - PHP `>= 5.4`
-
----
 
 ## Installation
 
@@ -37,6 +33,5 @@ composer require freshsystems/wp-acf-markdown-field
 
 ...
 ```
-
 
 If you're not using [Composer with WordPress](https://roots.io/bedrock-vs-regular-wordpress-install/), you can alternatively download the ZIP archive from the releases page and upload/install the plugin manually.

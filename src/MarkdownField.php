@@ -14,19 +14,19 @@ use acf_field;
  */
 class MarkdownField extends acf_field 
 {
-    /** @var \Fresh\ACFMarkdownField\Helpers $helpers */
-    protected $helpers;
+	/** @var \Fresh\ACFMarkdownField\Helpers $helpers */
+	protected $helpers;
 
-    /**
-     *  This function will setup the field type data
-     *
-     * @since ACF 5.0.0
-     * @param array $settings
-     * @param \Fresh\ACFMarkdownField\Helpers $helpers
-     */
+	/**
+	 *  This function will setup the field type data
+	 *
+	 * @since ACF 5.0.0
+	 * @param array $settings
+	 * @param \Fresh\ACFMarkdownField\Helpers $helpers
+	 */
 	function __construct( array $settings, Helpers $helpers ) 
-    {	
-        $this->helpers = $helpers;
+	{	
+		$this->helpers = $helpers;
 
 		/* name (string) Single word, no spaces. Underscores allowed */
 		$this->name = 'markdown';
@@ -40,12 +40,12 @@ class MarkdownField extends acf_field
 		var message = acf._e('markdown', 'error'); */
 		$this->l10n = [
 			// 'error'	=> __('Error!', 'wp-acf-markdown-field'),
-        ];
-	    /* settings (array) Store plugin settings (url, path, version) as a reference for later use with assets */
+		];
+		/* settings (array) Store plugin settings (url, path, version) as a reference for later use with assets */
 		$this->settings = $settings;
 
-        /* Call parent constructor: */
-    	parent::__construct();
+		/* Call parent constructor: */
+		parent::__construct();
 	}	
 	
 	/*
@@ -63,8 +63,8 @@ class MarkdownField extends acf_field
 	*  @return	n/a
 	*/
 	function render_field( $field ) 
-    {
-        echo '<textarea rows="8" class="fresh-acf-markdown-input" name="' . esc_attr($field['name']) . '">'. esc_textarea($field['value']).'</textarea>';
+	{
+		echo '<textarea rows="8" class="fresh-acf-markdown-input" name="' . esc_attr($field['name']) . '">'. esc_textarea($field['value']).'</textarea>';
 	}
 		
 	/*
@@ -81,18 +81,18 @@ class MarkdownField extends acf_field
 	*  @return	n/a
 	*/	
 	function input_admin_enqueue_scripts() 
-    {	
-        wp_enqueue_media();
+	{	
+		wp_enqueue_media();
 		// Register & include vendor and field script/styles:
-        // Scripts:
-        wp_register_script( 'wp-acf-markdown-field-manifest', $this->helpers->getAssetsUrl('/dist/scripts/manifest.js'), [], null );
+		// Scripts:
+		wp_register_script( 'wp-acf-markdown-field-manifest', $this->helpers->getAssetsUrl('/dist/scripts/manifest.js'), [], null );
 		wp_register_script( 'wp-acf-markdown-field-vendor', $this->helpers->getAssetsUrl('/dist/scripts/vendor.js'), ['wp-acf-markdown-field-manifest'], null );
 		wp_register_script( 'wp-acf-markdown-field', $this->helpers->getAssetsUrl('/dist/scripts/field.js'), ['acf-input', 'wp-acf-markdown-field-manifest', 'wp-acf-markdown-field-vendor' ], null );
 		wp_enqueue_script( 'wp-acf-markdown-field-manifest');
 		wp_enqueue_script( 'wp-acf-markdown-field-vendor');
 		wp_enqueue_script( 'wp-acf-markdown-field');
-        // Styles
-        wp_register_style( 'wp-acf-markdown-field', $this->helpers->getAssetsUrl('/dist/styles/field.css'), ['acf-input'], null );
+		// Styles
+		wp_register_style( 'wp-acf-markdown-field', $this->helpers->getAssetsUrl('/dist/styles/field.css'), ['acf-input'], null );
 		wp_enqueue_style( 'wp-acf-markdown-field' );
 	}
 	

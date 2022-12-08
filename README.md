@@ -2,14 +2,12 @@
 
 **A WordPress plugin that includes a markdown field type for use with the ACF plugin.**
 
----
-
-![Screenshot](screenshot.png)
-
 ## Features
 
 - Adds a `markdown` field type for use with the [Advanced Custom Fields](https://www.advancedcustomfields.com) plugin. 
 - Supports the WP media picker for embedding images into markdown content.
+
+![Screenshot](screenshot.png)
 
 ## Requirements
 

@@ -1,4 +1,8 @@
-# wp-acf-markdown-field
+# 📝 ACF Markdown Field
+
+**A WordPress plugin that includes a `markdown` field type for use with the ACF plugin.**
+
+---
 
 ![Screenshot](screenshot.png)
 

@@ -16,13 +16,13 @@
 
 ## Installation
 
-Use Composer to install the `mu-plugin`.
+Use Composer to install the **mu-plugin**.
 
 ```
 composer require freshsystems/wp-acf-markdown-field
 ```
 
- If your WordPress project doesn't support [directory-based mu-plugins](https://github.com/roots/bedrock-autoloader), or you'd prefer to install the plugin as a regular `plugin`, you can override the default install path in your project's composer file (ensuring that you use the correct path to your project's plugin directory).
+ If your WordPress project doesn't support [directory-based mu-plugins](https://github.com/roots/bedrock-autoloader), or you'd prefer to install the plugin as a regular plugin, you can override the default install path in your project's composer file (ensuring that you use the correct path to your project's plugin directory).
 
 ```
 ...
@@ -36,4 +36,4 @@ composer require freshsystems/wp-acf-markdown-field
 ...
 ```
 
-If you're not using [Composer with WordPress](https://roots.io/bedrock-vs-regular-wordpress-install/), you can alternatively download the ZIP archive from the releases page and upload/install the plugin manually.
+If you're not using [Composer with WordPress](https://roots.io/bedrock-vs-regular-wordpress-install/), you can alternatively download the ZIP archive from the [releases](https://github.com/freshsystems/wp-acf-markdown-field/releases) page and upload/install the plugin manually.
